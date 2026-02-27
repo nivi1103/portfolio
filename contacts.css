@@ -1,21 +1,36 @@
-@media (max-width:768px) {
+/* Mobile Responsive Fix */
 
-    img {
-        width: 200px;
-        height: auto;
+@media screen and (max-width:600px) {
+
+    body {
+        padding: 10px;
     }
 
     .home {
-        margin-left: 10px;
-        margin-top: 40px;
+        margin-left: 0px;
+        margin-top: 30px;
         text-align: center;
     }
 
     img {
-        width: 300px;
+        width: 180px;
         max-width: 100%;
         height: auto;
     }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
 }
 
 
