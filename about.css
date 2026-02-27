@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #011a48;
+    color: white;
+}
+
+/* Section Background */
+.about {
+    padding: 120px 10%;
+    position: relative;
+    background: linear-gradient(135deg, #011a48, #011a48, #011a48);
+    overflow: hidden;
+}
+
+/* Floating background circles */
+.about::before,
+.about::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, rgb(87, 87, 234), violet);
+    filter: blur(120px);
+    animation: move 8s infinite alternate ease-in-out;
+}
+
+.about::before {
+    top: -100px;
+    left: -100px;
+}
+
+.about::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50px, 50px);
+    }
+}
+
+/* Layout */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+/* Text Side */
+.about-text {
+    flex: 1;
+    animation: fadeSlide 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Title Gradient */
+.title {
+    font-size: 42px;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, rgb(87, 87, 234), violet);
+    background-clip: text;
+    color: transparent;
+}
+
+/* Paragraph Styling */
+.about-text p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #f0f2f5;
+    font-size: 20px;
+}
+
+/* Highlight words */
+.about-text span {
+    color: linear-gradient(45deg, rgb(46, 46, 219), violet);
+    font-weight: 600;
+}
+
+/* Last paragraph highlight */
+.highlight {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px linear-gradient(45deg, rgb(87, 87, 234), violet);
+
+    border-radius: 8px;
+}
+
+/* Right Card */
+.about-card {
+    flex: 1;
+    min-width: 280px;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    animation: fadeUp 1.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect */
+.about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px cyan;
+}
+
+/* Glow border animation */
+.glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, cyan, violet, cyan);
+    z-index: -1;
+    filter: blur(15px);
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.about-card h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: rgb(229, 230, 236);
+
+}
+
+.about-card p {
+    color: #f5f7f9;
+    size: 25px;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

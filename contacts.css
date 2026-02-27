@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.contact {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #011a48, #011a48);
+    text-align: center;
+    color: white;
+}
+
+.contact-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, rgb(95, 95, 229), violet);
+    background-clip: text;
+    color: transparent;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Input Style */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #555;
+    color: white;
+    font-size: 16px;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label,
+.input-group textarea:focus~label,
+.input-group textarea:valid~label {
+    top: -10px;
+    font-size: 14px;
+    color: rgb(13, 184, 227);
+}
+
+/* Button */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(45deg, cyan, violet);
+    color: 011a48;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px linear-gradient(45deg, cyan, violet, cyan);
+    ;
+}
+
+/* Error Message */
+.error {
+    color: #ff4d4d;
+    font-size: 13px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+}
+
+/* Success Message */
+#successMsg {
+    margin-top: 20px;
+    color: #00ffae;
+    font-weight: bold;
+}
